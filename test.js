@@ -1,38 +1,27 @@
 
-// const form = document.querySelector("form");
-// const name = document.querySelector("#name");
-// const email = document.querySelector("#email");
-// const password = document.querySelector("#password");
-// const errorMessages = document.querySelector("#errors")
+const form = document.querySelector("form");
+const name = document.querySelector("#name");
+const email = document.querySelector("#email");
+const phoneNumber = document.querySelector("#phone_number");
+const password = document.querySelector("#password");
+const confirmPassword = document.querySelector("#confirm_password");
+
+const errorMessages = document.querySelector(".error")
 
 
-// form.addEventListener("submit", function(e) {
-//     let messages = [];
-//     if (name.value === "" || name === null) {
-//         messages.push("you need to enter a name");
-//     }
+form.addEventListener("submit", function(e) {
+    let messages = [];
+    if (password.value === "" || password === null) {
+        messages.push("you need to enter a password");
+    } else if (password.value !== confirmPassword.value) {
+        messages.push("Passwords don't match, please check your entries");
+    }
 
-//     if (messages.length > 0) {
-//         e.preventDefault();
-//         errorMessages.innerHTML = messages.join(",");
-//     }
-// });
-
-// ******
-
-// const email = document.getElementById("mail");
-
-// console.log(email.reportValidity());
-// console.log(email.validity);
-
-// email.addEventListener("input", function() {
-//     if (email.validity.typeMismatch) {
-//         email.setCustomValidity("I want an email address");
-//         email.reportValidity();
-//     } else {
-//         email.setCustomValidity("");
-//     }
-// });
-
-// ******
+    if (messages.length > 0) {
+        e.preventDefault();
+        errorMessages.innerHTML = messages.join(",");
+    } else {
+        errorMessages.innerHTML = "";
+    }
+});
 

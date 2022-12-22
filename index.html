@@ -3,20 +3,18 @@
 <html lang="en">
     <head>
         <meta charset='UTF-8'>
-        <title>My first Webpage</title>
+        <title>Sign up Form</title>
         <link rel="stylesheet" href="styles.css">
     </head>
 
     <body>
-        <div id="errors"></div>
-
         
         <div class="main">
 
             <div class="main_left">
                 <div class="header_logo_container">
                     <img src="./images/odin-logo-lined.png" alt="odin_logo">
-                    <span>ODIN</span>
+                    <span>BERK</span>
                 </div>
             </div>
 
@@ -25,9 +23,9 @@
                     <h3>This is not a real online service! You know
                         you need something like this in your life
                         to help you realise your deepest dreams. Sign up
-                        <em>now</em> to get started
+                        <em>now</em> to get started.
                     </h3>
-                    <h3>You <em>know</em> you want to</h3>
+                    <h3>Ich bin <em>ein</em> Berliner!</h3>
                 </div>
                 <div class="main_right_mid">
                     <h3>Let's do this!</h3>
@@ -35,32 +33,32 @@
                         <div class="form_left_rows">
                             <div class="form_row">
                                 <label for="first_name">FIRST NAME</label>
-                                <input type="text" name="first_name" id="first_name">
+                                <input type="text" name="first_name" id="first_name" maxlength="25" placeholder="Berk">
                             </div>
                             <div class="form_row">
-                                <label for="email">EMAIL</label>
-                                <input type="email" name="email" id="email">
+                                <label for="email">EMAIL*</label>
+                                <input type="email" name="email" id="email" maxlength="25" placeholder="berkgirgin35@gmail.com" required>
                             </div>
                             <div class="form_row">
-                                <label for="password">PASSWORD</label>
-                                <input type="password" name="password" id="password">
+                                <label for="password">PASSWORD*</label>
+                                <input type="password" name="password" id="password" maxlength="25" placeholder="myPassWord1881" required>
                             </div>
                         </div>
                         <div class="form_right_rows">
                             <div class="form_row">
                                 <label for="last_name">LAST NAME</label>
-                                <input type="text" name="last_name" id="last_name">
+                                <input type="text" name="last_name" id="last_name" maxlength="25" placeholder="Girgin">
                             </div>
                             <div class="form_row">
                                 <label for="phone_number">PHONE NUMBER</label>
-                                <input type="tel" name="phone_number" id="phone_number">
+                                <input type="tel" name="phone_number" id="phone_number" minlength="15" maxlength="15" placeholder="+30 177 1789183">
                             </div>
                             <div class="form_row">
-                                <label for="confirm_password">CONFIRM PASSWORD</label>
-                                <input type="password" name="confirm_password" id="confirm_password">
+                                <label for="confirm_password">CONFIRM PASSWORD*</label>
+                                <input type="password" name="confirm_password" id="confirm_password" maxlength="25" placeholder="myPassWord1881" required>
+                                <div class="error"></div>
                             </div>
                         </div>
-                   
                     </form>                    
                 </div>
 
